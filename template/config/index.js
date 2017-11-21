@@ -11,7 +11,6 @@ const assetsPublicPath = process.env.WEBPACK_ASSETS_PUBLIC_PATH || '/'
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory,
     assetsPublicPath,
@@ -65,7 +64,6 @@ module.exports = {
     /**
      * Source Maps
      */
-
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
