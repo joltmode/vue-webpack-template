@@ -27,6 +27,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
       '@': resolve('src'),
+      modernizr$: resolve('.modernizrrc')
     }
   },
   module: {
@@ -43,6 +44,10 @@ module.exports = {
         }
       }] : []),
       {{/lint}}
+      {
+        test: /\.modernizrrc$/,
+        use: [ 'modernizr-loader', 'json-loader' ]
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
